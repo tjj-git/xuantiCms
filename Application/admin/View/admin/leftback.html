@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>晶科物流管理系统</title>
+<link rel="stylesheet" href="__PUBLIC__/cms/css/bootstrap.css" />
+<link rel="stylesheet" href="__PUBLIC__/cms/css/css.css" />
+<script type="text/javascript" src="__PUBLIC__/cms/js/jquery1.9.0.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/cms/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/cms/js/sdmenu.js"></script>
+<script type="text/javascript" src="__PUBLIC__/cms/js/laydate/laydate.js"></script>
+
+</head>
+
+<body>
+
+     <div class="left">
+
+     <script type="text/javascript">
+var myMenu;
+window.onload = function() {
+    myMenu = new SDMenu("my_menu");
+    myMenu.init();
+};
+</script>
+<div id="my_menu" class="sdmenu">
+
+    <?php
+         $left_array=$_SESSION['left_array'];var_dump($left_array);
+         foreach($left_array as $key =>$value){
+    echo '<div>';
+       echo '<span>'.$key.'</span>';
+        foreach($value as $k =>$val){
+       echo ' <a href='.$val.' target=mainFrame>'.$k.'</a>';
+       }
+    echo '</div>';
+    }
+    ?>
+    <div >
+        <span>班级管理</span>
+        <a href="/xuantiCms/class/index" target="mainFrame">班级列表</a>
+        <a href="/xuantiCms/class/addUI" target="mainFrame">添加班级</a>
+
+    </div>
+    <div >
+        <span>教师管理</span>
+        <a href="/xuantiCms/teacher/index" target="mainFrame">教师列表</a>
+        <a href="/xuantiCms/teacher/addUI" target="mainFrame">添加教师</a>
+
+    </div>
+    <div >
+    <span>课程类型管理</span>
+    <a href="/xuantiCms/type/index" target="mainFrame">类型列表</a>
+    <a href="/xuantiCms/type/addUI" target="mainFrame">添加类型</a>
+   </div>
+    <div >
+        <span>学期管理</span>
+        <a href="/xuantiCms/term/index" target="mainFrame">学期列表</a>
+        <a href="/xuantiCms/term/addUI" target="mainFrame">添加学期</a>
+    </div>
+    <div >
+        <span>课程管理</span>
+        <a href="/xuantiCms/subject/index" target="mainFrame">课程列表</a>
+        <a href="/xuantiCms/subject/addUI" target="mainFrame">添加课程</a>
+    </div>
+
+    
+ 	<div class="collapsed">
+		<span>票据查询</span>
+		<a href="#">票据查询</a>
+		<a href="#">跟踪查询</a>
+		<a href="#">车次查询</a>
+
+	</div>
+
+
+</div>
+     </div>
+ <script>
+!function(){
+laydate.skin('molv');
+laydate({elem: '#Calendar'});
+}();
+ 
+</script>
+
+
+
+ 
+</body>
+</html>

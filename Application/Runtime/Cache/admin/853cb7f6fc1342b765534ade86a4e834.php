@@ -1,0 +1,93 @@
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>选课信息管理系统</title>
+<link rel="stylesheet" href="/xuantiCms/Public/cms/css/bootstrap.css" />
+<link rel="stylesheet" href="/xuantiCms/Public/cms/css/css.css" />
+<script type="text/javascript" src="/xuantiCms/Public/cms/js/jquery1.9.0.min.js"></script>
+<script type="text/javascript" src="/xuantiCms/Public/cms/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/xuantiCms/Public/cms/js/sdmenu.js"></script>
+<script type="text/javascript" src="/xuantiCms/Public/cms/js/laydate/laydate.js"></script>
+
+</head>
+
+<body>
+
+     <div class="Switch"></div>
+     <script type="text/javascript">
+	$(document).ready(function(e) {
+    $(".Switch").click(function(){
+	$(".left").toggle();
+	 
+		});
+});
+</script>
+
+     <div class="right"  id="mainFrame">
+     
+     <div class="right_cont">
+<ul class="breadcrumb">当前位置：
+  <a href="#">首页</a> <span class="divider">/</span>
+  <a href="#">教师管理</a> <span class="divider">/</span>
+  教师添加
+</ul>
+   
+   <div class="title_right"><strong>教师添加</strong></div>
+<div style="width:900px;margin:auto;">
+    <form action="/xuantiCms/teacher/add" method="post">
+       <table class="table table-bordered">
+         <tr>
+               <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">编号：</td>
+               <td width="23%">添加后自动生成</td>
+              <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">姓名：</td>
+              <td width="23%"><input type="text"  class="span1-1" id="name" name="name" style="height: 25px;width: 180px;"/></td>
+             <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">性别：</td>
+             <td width="23%" >
+                 <input type="radio"  class="span1-1" id="sex" name="sex" value="男" checked/>男
+                 <input type="radio"  class="span1-1" id="sex" name="sex" value="女"/>女
+             </td>
+             </tr>
+           <tr>
+             <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">登陆密码：</td>
+             <td width="23%" height="30%"><input type="text"  class="span1-1" id="password" name="password"  style="height: 25px;width: 180px;"/></td>
+             <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">联系电话：</td>
+             <td width="23%"><input type="text"  class="span1-1" id="tel" name="tel" style="height: 25px;width: 180px;"/></td>
+               <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">备注：</td>
+               <td width="23%"><input type="text"  class="span1-1" id="tel" name="desc" style="height: 25px;width: 180px;"/></td>
+
+           </tr>
+
+       </table>
+        <table  class="margin-bottom-20 table  no-border" >
+            <tr>
+                <td class="text-center">
+                    <input type="submit" value="确定" class="btn btn-info " style="width:80px;" />
+                </td>
+            </tr>
+        </table>
+</form>
+   </div>  
+     
+ </div>     
+     </div>
+    </div>
+    
+<!-- 底部 -->
+<div id="footer">版权所有：晶科客流 &copy; 2015&nbsp;&nbsp;&nbsp;&nbsp;服务热线：0371-88888888</div>
+    
+    
+
+ <script>
+!function(){
+laydate.skin('molv');
+laydate({elem: '#Calendar'});
+}();
+ 
+</script>
+
+
+
+ 
+</body>
+</html>
